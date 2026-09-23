@@ -65,6 +65,16 @@ st.caption("Pre-trained visual encoder → embedding → distance → KNN")
 RESULTS_DIR = ROOT / "results"
 
 
+def gallery_path(relative_path) -> Path:
+    """Join a stored gallery path to ROOT, cross-platform.
+
+    artifacts/*_paths.json were written on Windows with backslash separators
+    (e.g. "data\\train\\cat\\cat_001.jpg"). On Linux those backslashes are
+    ordinary characters, so normalise them to "/" before building the Path.
+    """
+    return ROOT / Path(str(relative_path).replace("\\", "/"))
+
+
 def read_csv_safe(path: Path):
     """Read a results CSV; return None if it is missing or unreadable."""
     if not path.exists():
@@ -135,14 +145,14 @@ else:
     cols = st.columns(5)
     for rank, (col, idx) in enumerate(zip(cols, similar), start=1):
         with col:
-            st.image(ROOT / paths[idx], use_container_width=True)
+            st.image(gallery_path(paths[idx]), use_container_width=True)
             st.caption(f"#{rank} · {LABEL_NAMES[int(y[idx])]} · d={distances[idx]:.4f}")
 
     st.subheader("Top 5 most dissimilar")
     cols = st.columns(5)
     for rank, (col, idx) in enumerate(zip(cols, dissimilar), start=1):
         with col:
-            st.image(ROOT / paths[idx], use_container_width=True)
+            st.image(gallery_path(paths[idx]), use_container_width=True)
             st.caption(f"#{rank} · {LABEL_NAMES[int(y[idx])]} · d={distances[idx]:.4f}")
 
     st.subheader("KNN neighbors used for prediction")
