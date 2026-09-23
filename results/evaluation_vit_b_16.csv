@@ -1,0 +1,4 @@
+encoder,metric,k,k_selection,accuracy
+vit_b_16,euclidean,1,5-fold CV on train (mean=1.0000),1.0
+vit_b_16,manhattan,1,5-fold CV on train (mean=1.0000),1.0
+vit_b_16,cosine,1,5-fold CV on train (mean=1.0000),1.0

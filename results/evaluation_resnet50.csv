@@ -1,0 +1,4 @@
+encoder,metric,k,k_selection,accuracy
+resnet50,euclidean,1,5-fold CV on train (mean=1.0000),1.0
+resnet50,manhattan,1,5-fold CV on train (mean=1.0000),1.0
+resnet50,cosine,1,5-fold CV on train (mean=1.0000),1.0

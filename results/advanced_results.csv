@@ -1,0 +1,10 @@
+encoder,metric,k,k_selection_cv_mean_accuracy,k_selection_cv_std_accuracy,feature_dimension,test_accuracy
+resnet50,euclidean,1,1.0,0.0,2048,1.0
+resnet50,manhattan,1,1.0,0.0,2048,1.0
+resnet50,cosine,1,1.0,0.0,2048,1.0
+mobilenet_v3_large,euclidean,1,1.0,0.0,960,1.0
+mobilenet_v3_large,manhattan,1,1.0,0.0,960,1.0
+mobilenet_v3_large,cosine,1,1.0,0.0,960,1.0
+vit_b_16,euclidean,1,1.0,0.0,768,1.0
+vit_b_16,manhattan,1,1.0,0.0,768,1.0
+vit_b_16,cosine,1,1.0,0.0,768,1.0

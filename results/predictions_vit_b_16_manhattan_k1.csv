@@ -1,0 +1,11 @@
+image,true_label,pred_label,correct
+data\test\cat\cat_001.jpg,Cat,Cat,True
+data\test\cat\cat_002.jpg,Cat,Cat,True
+data\test\cat\cat_003.jpg,Cat,Cat,True
+data\test\cat\cat_004.jpg,Cat,Cat,True
+data\test\cat\cat_005.jpg,Cat,Cat,True
+data\test\dog\dog_001.jpg,Dog,Dog,True
+data\test\dog\dog_002.jpg,Dog,Dog,True
+data\test\dog\dog_003.jpg,Dog,Dog,True
+data\test\dog\dog_004.jpg,Dog,Dog,True
+data\test\dog\dog_005.jpg,Dog,Dog,True
